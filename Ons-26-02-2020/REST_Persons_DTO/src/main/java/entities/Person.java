@@ -26,7 +26,6 @@ public class Person implements Serializable {
     private Date created;
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date lastEdited;
-    
     @OneToOne
     private Address address;
     
@@ -47,6 +46,14 @@ public class Person implements Serializable {
         this.phone = phone;
         this.created = new Date();
         this.lastEdited = new Date();
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
     }
 
     public String getfName() {

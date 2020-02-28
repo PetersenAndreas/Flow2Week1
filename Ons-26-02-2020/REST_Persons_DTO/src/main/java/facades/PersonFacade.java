@@ -101,6 +101,7 @@ public class PersonFacade implements IPersonFacade{
             if(p != null) {
             em.getTransaction().begin();
             em.remove(p);
+            em.remove(p.getAddress());
             em.getTransaction().commit();
             return new PersonDTO(p);
             } else {
