@@ -27,9 +27,6 @@ public class Person implements Serializable {
     @Temporal(javax.persistence.TemporalType.DATE)
     private Date lastEdited;
     
-    @OneToOne
-    private Address address;
-    
     public Person() {
     }
         
